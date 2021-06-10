@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/big_zombie_run_anim_f2.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Target.gd" type="Script" id=2]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/big_zombie_run_anim_f1.png" type="Texture" id=3]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/big_zombie_run_anim_f3.png" type="Texture" id=4]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/big_zombie_run_anim_f0.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 110.954, 96.0167 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 103.702, 69.4791 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "RUN",
+"speed": 8.0
+} ]
+
+[node name="Target" type="KinematicBody2D"]
+scale = Vector2( 0.844642, 1.25913 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 4.07275, 15.6286 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0.736528, 0.186247 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 4.34573, 32.0085 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 4.87192, 6.1245 )
+scale = Vector2( 9.97243, 5.7843 )
+frames = SubResource( 3 )
+animation = "RUN"
+frame = 1
+playing = true
+flip_h = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Itim/ThaleahFat.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/QuestTemplate.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 1 )
+
+[node name="QuestTemplate" type="Node2D"]
+position = Vector2( 521.798, 448.698 )
+script = ExtResource( 2 )
+unlocks_needed = {
+}
+
+[node name="BackGround" type="ColorRect" parent="."]
+margin_left = -434.0
+margin_top = -192.0
+margin_right = 475.0
+margin_bottom = 193.0
+mouse_filter = 1
+color = Color( 0.215686, 0.211765, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = -303.756
+margin_top = 112.081
+margin_right = 557.244
+margin_bottom = 210.081
+rect_scale = Vector2( 0.726695, 0.681105 )
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "incomplete"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameOfQuestText" type="Label" parent="."]
+margin_left = -241.847
+margin_top = -192.884
+margin_right = 426.153
+margin_bottom = -100.884
+rect_scale = Vector2( 0.797751, 0.845751 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.937255, 1, 0, 1 )
+text = "-name of quest-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestDescriptionText" type="Label" parent="."]
+margin_left = -1013.19
+margin_top = -139.956
+margin_right = 862.807
+margin_bottom = 21.0445
+rect_scale = Vector2( 0.471918, 0.983822 )
+rect_pivot_offset = Vector2( 1122.35, 876.575 )
+custom_fonts/font = SubResource( 2 )
+text = "Description"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RewardText" type="Label" parent="."]
+margin_left = -419.152
+margin_top = 27.4489
+margin_right = 248.848
+margin_bottom = 119.449
+rect_scale = Vector2( 0.752524, 0.824643 )
+custom_fonts/font = SubResource( 2 )
+text = "Reward:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RewardTextDescription" type="Label" parent="."]
+margin_left = -144.403
+margin_top = 24.9737
+margin_right = 523.597
+margin_bottom = 116.974
+rect_scale = Vector2( 0.752524, 0.824643 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.984314, 0, 1 )
+text = "200 gold"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

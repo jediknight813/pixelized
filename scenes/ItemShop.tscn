@@ -1,0 +1,356 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI/ColorRect.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/BuyItemTemplate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/ItemShop.gd" type="Script" id=3]
+[ext_resource path="res://Itim/ThaleahFat.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 600
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 150
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 150
+font_data = ExtResource( 4 )
+
+[node name="ItemShop" type="Control"]
+anchor_right = 1.031
+anchor_bottom = 1.009
+margin_right = 0.52002
+margin_bottom = -0.280151
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" parent="." instance=ExtResource( 1 )]
+margin_left = -9.94409
+margin_top = -19.0579
+margin_right = 1075.06
+margin_bottom = 1904.94
+
+[node name="WeaponShopContainer" type="ScrollContainer" parent="."]
+anchor_right = 0.967
+anchor_bottom = 0.976
+margin_left = -5.0
+margin_top = 140.0
+margin_right = -18.238
+margin_bottom = -280.512
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WeaponShopContainer"]
+margin_bottom = 4407.0
+custom_constants/separation = 1
+
+[node name="Item3" type="Label" parent="WeaponShopContainer/VBoxContainer"]
+margin_bottom = 550.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="WeaponShopContainer/VBoxContainer/Item3" instance=ExtResource( 2 )]
+margin_top = -97.2997
+margin_bottom = -57.2997
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item4" type="Label" parent="WeaponShopContainer/VBoxContainer"]
+margin_top = 551.0
+margin_bottom = 1101.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="WeaponShopContainer/VBoxContainer/Item4" instance=ExtResource( 2 )]
+margin_top = -97.2997
+margin_bottom = -57.2997
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item5" type="Label" parent="WeaponShopContainer/VBoxContainer"]
+margin_top = 1102.0
+margin_bottom = 1652.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="WeaponShopContainer/VBoxContainer/Item5" instance=ExtResource( 2 )]
+margin_top = -97.2997
+margin_bottom = -57.2997
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item6" type="Label" parent="WeaponShopContainer/VBoxContainer"]
+margin_top = 1653.0
+margin_bottom = 2203.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="WeaponShopContainer/VBoxContainer/Item6" instance=ExtResource( 2 )]
+margin_top = -97.2997
+margin_bottom = -57.2997
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item7" type="Label" parent="WeaponShopContainer/VBoxContainer"]
+margin_top = 2204.0
+margin_bottom = 2754.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="WeaponShopContainer/VBoxContainer/Item7" instance=ExtResource( 2 )]
+margin_left = 533.122
+margin_top = -2300.68
+margin_right = 573.122
+margin_bottom = -2260.68
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item8" type="Label" parent="WeaponShopContainer/VBoxContainer"]
+margin_top = 2755.0
+margin_bottom = 3305.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="WeaponShopContainer/VBoxContainer/Item8" instance=ExtResource( 2 )]
+margin_left = 533.122
+margin_top = -2300.68
+margin_right = 573.122
+margin_bottom = -2260.68
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item9" type="Label" parent="WeaponShopContainer/VBoxContainer"]
+margin_top = 3306.0
+margin_bottom = 3856.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="WeaponShopContainer/VBoxContainer/Item9" instance=ExtResource( 2 )]
+margin_left = 533.122
+margin_top = -2300.68
+margin_right = 573.122
+margin_bottom = -2260.68
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item10" type="Label" parent="WeaponShopContainer/VBoxContainer"]
+margin_top = 3857.0
+margin_bottom = 4407.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="WeaponShopContainer/VBoxContainer/Item10" instance=ExtResource( 2 )]
+margin_left = 533.122
+margin_top = -2300.68
+margin_right = 573.122
+margin_bottom = -2260.68
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="CostumeShopContainer" type="ScrollContainer" parent="."]
+margin_left = 7.0
+margin_top = 141.0
+margin_right = 1055.0
+margin_bottom = 1594.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CostumeShopContainer"]
+margin_bottom = 4407.0
+custom_constants/separation = 1
+
+[node name="Item3" type="Label" parent="CostumeShopContainer/VBoxContainer"]
+margin_bottom = 550.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="CostumeShopContainer/VBoxContainer/Item3" instance=ExtResource( 2 )]
+margin_top = -97.2997
+margin_bottom = -57.2997
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item4" type="Label" parent="CostumeShopContainer/VBoxContainer"]
+margin_top = 551.0
+margin_bottom = 1101.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="CostumeShopContainer/VBoxContainer/Item4" instance=ExtResource( 2 )]
+margin_top = -97.2997
+margin_bottom = -57.2997
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item5" type="Label" parent="CostumeShopContainer/VBoxContainer"]
+margin_top = 1102.0
+margin_bottom = 1652.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="CostumeShopContainer/VBoxContainer/Item5" instance=ExtResource( 2 )]
+margin_top = -97.2997
+margin_bottom = -57.2997
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item6" type="Label" parent="CostumeShopContainer/VBoxContainer"]
+margin_top = 1653.0
+margin_bottom = 2203.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="CostumeShopContainer/VBoxContainer/Item6" instance=ExtResource( 2 )]
+margin_top = -97.2997
+margin_bottom = -57.2997
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item7" type="Label" parent="CostumeShopContainer/VBoxContainer"]
+margin_top = 2204.0
+margin_bottom = 2754.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="CostumeShopContainer/VBoxContainer/Item7" instance=ExtResource( 2 )]
+margin_left = 533.122
+margin_top = -2300.68
+margin_right = 573.122
+margin_bottom = -2260.68
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item8" type="Label" parent="CostumeShopContainer/VBoxContainer"]
+margin_top = 2755.0
+margin_bottom = 3305.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="CostumeShopContainer/VBoxContainer/Item8" instance=ExtResource( 2 )]
+margin_left = 533.122
+margin_top = -2300.68
+margin_right = 573.122
+margin_bottom = -2260.68
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item9" type="Label" parent="CostumeShopContainer/VBoxContainer"]
+margin_top = 3306.0
+margin_bottom = 3856.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="CostumeShopContainer/VBoxContainer/Item9" instance=ExtResource( 2 )]
+margin_left = 533.122
+margin_top = -2300.68
+margin_right = 573.122
+margin_bottom = -2260.68
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="Item10" type="Label" parent="CostumeShopContainer/VBoxContainer"]
+margin_top = 3857.0
+margin_bottom = 4407.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemTemplate" parent="CostumeShopContainer/VBoxContainer/Item10" instance=ExtResource( 2 )]
+margin_left = 533.122
+margin_top = -2300.68
+margin_right = 573.122
+margin_bottom = -2260.68
+rect_scale = Vector2( 0.912704, 0.850342 )
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="ItemShopName" type="Label" parent="."]
+margin_left = 128.693
+margin_top = 13.0174
+margin_right = 925.693
+margin_bottom = 151.017
+custom_fonts/font = SubResource( 2 )
+text = "weapon shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackToMenu" type="Button" parent="."]
+margin_left = 19.2135
+margin_top = 1682.13
+margin_right = 543.214
+margin_bottom = 1878.13
+custom_fonts/font = SubResource( 3 )
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BackToMenu" to="." method="_on_BackToMenu_pressed"]

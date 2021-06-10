@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/ItemSprites.gd" type="Script" id=1]
+[ext_resource path="res://Background/Items/Boxes/Box3/Idle.png" type="Texture" id=2]
+[ext_resource path="res://Background/Items/Boxes/Box1/Idle.png" type="Texture" id=3]
+[ext_resource path="res://Background/Items/Boxes/Box2/Idle.png" type="Texture" id=4]
+[ext_resource path="res://scenes/RandomItem.gd" type="Script" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "New Anim 1",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 88.8903, 90.6597 )
+
+[node name="RandomItem" type="KinematicBody2D"]
+position = Vector2( 0.221874, -0.00663185 )
+script = ExtResource( 5 )
+speed = 400
+
+[node name="ItemSprites" type="AnimatedSprite" parent="."]
+position = Vector2( 0.0317919, -0.0234239 )
+scale = Vector2( 10.8422, 11.2171 )
+frames = SubResource( 1 )
+animation = "New Anim 1"
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="ItemSprites"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemSprites/Area2D"]
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.50959, -0.0135307 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="ItemSprites/Area2D" to="." method="_on_Area2D_body_entered"]

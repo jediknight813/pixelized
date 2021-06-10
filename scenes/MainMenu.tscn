@@ -1,0 +1,182 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scenes/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/elf_f_idle_anim_f0.png" type="Texture" id=2]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/chest_mimic_open_anim_f2.png" type="Texture" id=3]
+[ext_resource path="res://Itim/ThaleahFat.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/weapon_anime_sword.png" type="Texture" id=5]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/weapon_red_magic_staff.png" type="Texture" id=6]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/knight_f_idle_anim_f0.png" type="Texture" id=7]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/0x72_DungeonTilesetII_v1.3.png" type="Texture" id=8]
+[ext_resource path="res://scenes/Hover.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/ColorRect.tscn" type="PackedScene" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 300
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 400
+font_data = ExtResource( 4 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "0x72_DungeonTilesetII_v1.3.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 32, 64, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "0x72_DungeonTilesetII_v1.3.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 64, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "0x72_DungeonTilesetII_v1.3.png 2"
+2/texture = ExtResource( 8 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 112, 16, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" parent="." instance=ExtResource( 10 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 77.9815
+margin_top = 213.948
+margin_right = 1239.98
+margin_bottom = 488.948
+rect_scale = Vector2( 0.817458, 1.13454 )
+custom_fonts/font = SubResource( 1 )
+text = "PIXELIZED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 153.234
+margin_top = 474.217
+margin_right = 2497.23
+margin_bottom = 749.217
+rect_scale = Vector2( 0.337231, 0.600922 )
+custom_fonts/font = SubResource( 1 )
+text = "-can you escape?-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hover3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 147.915, 1410.91 )
+scale = Vector2( 0.475404, 0.616704 )
+time = 2
+speed = 30
+
+[node name="SettingsButton" type="Button" parent="Hover3"]
+margin_left = 12.9056
+margin_top = 128.726
+margin_right = 1699.91
+margin_bottom = 501.726
+rect_scale = Vector2( 0.965389, 1.07769 )
+custom_fonts/font = SubResource( 2 )
+text = "-settings-"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 2.63833, 2.44259 )
+tile_set = SubResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+
+[node name="Hover2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 409.237, 1268.51 )
+scale = Vector2( 15.7572, 10.7109 )
+time = 2
+speed = 24
+
+[node name="PlayButton" type="Button" parent="Hover2"]
+margin_left = -12.6594
+margin_top = -3.01294
+margin_right = 1024.34
+margin_bottom = 369.987
+rect_scale = Vector2( 0.0397539, 0.05429 )
+custom_fonts/font = SubResource( 2 )
+text = "-Play-"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sword" type="Sprite" parent="."]
+position = Vector2( 715.499, 837.284 )
+rotation = -0.86793
+scale = Vector2( 12.2328, 10.6163 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="knight" type="Sprite" parent="sword"]
+position = Vector2( 10.6069, 18.0277 )
+rotation = 1.12749
+scale = Vector2( 1.59667, 1.21444 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="magic_staff" type="Sprite" parent="."]
+position = Vector2( 280.059, 927.017 )
+rotation = 0.992453
+scale = Vector2( 13.3555, 9.25206 )
+texture = ExtResource( 6 )
+
+[node name="elf" type="Sprite" parent="magic_staff"]
+position = Vector2( -10.4915, 6.49515 )
+rotation = -1.29689
+scale = Vector2( 1.82366, 1.20557 )
+texture = ExtResource( 2 )
+
+[node name="chest_mimic" type="Sprite" parent="."]
+position = Vector2( 532.38, 1056.15 )
+scale = Vector2( 15.7572, 10.7109 )
+texture = ExtResource( 3 )
+
+[node name="Hover" parent="." instance=ExtResource( 9 )]
+position = Vector2( 365.029, 1255.49 )
+scale = Vector2( 15.7572, 10.7109 )
+time = 2
+speed = 32
+
+[node name="0x72_DungeonTilesetII_v13" type="Sprite" parent="."]
+position = Vector2( -994.774, 1020.11 )
+texture = ExtResource( 8 )
+
+[connection signal="pressed" from="Hover3/SettingsButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Hover2/PlayButton" to="." method="_on_Button_pressed"]

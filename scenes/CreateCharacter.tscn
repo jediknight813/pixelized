@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://UI/ColorRect.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Itim/ThaleahFat.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/elf_f_idle_anim_f0.png" type="Texture" id=3]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/elf_m_idle_anim_f0.png" type="Texture" id=4]
+[ext_resource path="res://scenes/CreateCharacter.gd" type="Script" id=5]
+[ext_resource path="res://Roboto/Roboto-MediumItalic.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 150
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+
+[node name="CreateCharacter" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="ColorRect" parent="." instance=ExtResource( 1 )]
+margin_left = -2.6134
+margin_top = -5.16119
+margin_right = 1082.39
+margin_bottom = 1918.84
+
+[node name="MenuDescriptionText" type="Label" parent="."]
+margin_left = 61.3036
+margin_top = 41.4702
+margin_right = 1600.3
+margin_bottom = 225.47
+rect_scale = Vector2( 0.621072, 0.683806 )
+custom_fonts/font = SubResource( 1 )
+text = "Create character"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameDescriptionText" type="Label" parent="."]
+margin_left = 410.052
+margin_top = 248.0
+margin_right = 810.052
+margin_bottom = 432.0
+rect_scale = Vector2( 0.621072, 0.683806 )
+custom_fonts/font = SubResource( 1 )
+text = "name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameDescriptionText2" type="Label" parent="."]
+margin_left = 339.331
+margin_top = 649.745
+margin_right = 939.331
+margin_bottom = 833.745
+rect_scale = Vector2( 0.621072, 0.683806 )
+custom_fonts/font = SubResource( 1 )
+text = "Gender"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PickFemaleGender" type="Button" parent="."]
+margin_left = 562.862
+margin_top = 803.332
+margin_right = 1024.86
+margin_bottom = 999.332
+custom_fonts/font = SubResource( 2 )
+text = "female"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartGame" type="Button" parent="."]
+margin_left = 318.908
+margin_top = 1671.96
+margin_right = 780.908
+margin_bottom = 1867.96
+custom_fonts/font = SubResource( 2 )
+text = "finish"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PickMaleGender" type="Button" parent="."]
+margin_left = 39.4219
+margin_top = 802.662
+margin_right = 462.422
+margin_bottom = 998.662
+custom_fonts/font = SubResource( 2 )
+text = "male"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoneButton" type="Button" parent="."]
+margin_left = 746.109
+margin_top = 409.874
+margin_right = 1058.11
+margin_bottom = 563.874
+custom_fonts/font = SubResource( 2 )
+text = "done"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FemaleElf" type="Sprite" parent="."]
+position = Vector2( 809.29, 1125.85 )
+scale = Vector2( 24.5017, 22.9293 )
+texture = ExtResource( 3 )
+
+[node name="MaleElf" type="Sprite" parent="."]
+position = Vector2( 254.734, 1166.3 )
+scale = Vector2( 25.89, 21.5693 )
+texture = ExtResource( 4 )
+
+[node name="GetCharacterName" type="TextEdit" parent="."]
+margin_left = 28.0
+margin_top = 401.0
+margin_right = 184.0
+margin_bottom = 436.0
+rect_scale = Vector2( 4.4085, 7.03117 )
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="PickFemaleGender" to="." method="_on_PickFemaleGender_pressed"]
+[connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
+[connection signal="pressed" from="PickMaleGender" to="." method="_on_PickMaleGender_pressed"]

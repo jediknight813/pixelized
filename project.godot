@@ -1,0 +1,39 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Iphone Game"
+run/main_scene="res://scenes/MainMenu.tscn"
+
+[autoload]
+
+CharacterGlobals="*res://scenes/CharacterGlobals.gd"
+GameGlobals="*res://scenes/GameGlobals.gd"
+GlobalVars="*res://scenes/GlobalVars.tscn"
+
+[display]
+
+window/size/width=1080
+window/size/height=1920
+window/stretch/mode="2d"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://scenes/default_env.tres"
+quality/dynamic_fonts/use_oversampling=false

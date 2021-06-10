@@ -1,0 +1,130 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/weapon_big_hammer.png" type="Texture" id=1]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/weapon_axe.png" type="Texture" id=2]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/weapon_cleaver.png" type="Texture" id=3]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/weapon_duel_sword.png" type="Texture" id=4]
+[ext_resource path="res://Itim/ThaleahFat.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.3.1/frames/weapon_anime_sword.png" type="Texture" id=6]
+[ext_resource path="res://scenes/BuyItemTemplate.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Hammer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "BigSword",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "DuelSword",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Cleaver",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Axe",
+"speed": 5.0
+} ]
+
+[node name="BuyItemTemplate" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+item_name = "Sword"
+price = 400
+image_name = "BigSword"
+item_type_and_value = {
+"Weapon": "BigSword"
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 7.0
+margin_top = 181.0
+margin_right = 553.0
+margin_bottom = 805.0
+mouse_filter = 1
+color = Color( 0.2, 0.196078, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyItemButton" type="Button" parent="."]
+margin_left = 59.6124
+margin_top = 698.417
+margin_right = 492.612
+margin_bottom = 800.417
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemPrice" type="Label" parent="."]
+margin_left = 77.6391
+margin_top = 274.277
+margin_right = 296.639
+margin_bottom = 366.277
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+text = "COST:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeaponItems" type="AnimatedSprite" parent="."]
+position = Vector2( 275.447, 526.234 )
+rotation = -0.980778
+scale = Vector2( 8.60245, 10.9336 )
+frames = SubResource( 3 )
+animation = "Axe"
+flip_h = true
+
+[node name="ItemNameText" type="Label" parent="."]
+margin_left = 49.705
+margin_top = 185.506
+margin_right = 505.705
+margin_bottom = 277.506
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+text = "-item name-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemPricenNumber" type="Label" parent="."]
+margin_left = 322.718
+margin_top = 272.065
+margin_right = 541.718
+margin_bottom = 364.065
+mouse_filter = 1
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.960784, 0.0196078, 1 )
+text = "999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BuyItemButton" to="." method="_on_BuyItemButton_pressed"]

@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UI/ColorRect.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Itim/ThaleahFat.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/ShopSelection.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 150
+font_data = ExtResource( 2 )
+
+[node name="ShopSelection" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.028
+margin_bottom = -58.76
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" parent="." instance=ExtResource( 1 )]
+margin_left = -42.1765
+margin_top = -63.1175
+margin_right = 1104.82
+margin_bottom = 1974.88
+
+[node name="ShopText" type="Label" parent="."]
+margin_left = 334.573
+margin_top = -7.21846
+margin_right = 734.573
+margin_bottom = 176.782
+custom_fonts/font = SubResource( 1 )
+text = "SHOP"
+
+[node name="WeaponShopButton" type="Button" parent="."]
+margin_left = 103.41
+margin_top = 250.77
+margin_right = 988.41
+margin_bottom = 461.77
+custom_fonts/font = SubResource( 2 )
+text = "WEAPONS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CostumeShopButton2" type="Button" parent="."]
+margin_left = 92.4839
+margin_top = 561.076
+margin_right = 977.484
+margin_bottom = 772.076
+custom_fonts/font = SubResource( 2 )
+text = "costumes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenuButton" type="Button" parent="."]
+margin_left = 44.955
+margin_top = 1709.42
+margin_right = 729.955
+margin_bottom = 1891.42
+rect_scale = Vector2( 0.82965, 0.871782 )
+custom_fonts/font = SubResource( 2 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="WeaponShopButton" to="." method="_on_WeaponShopButton_pressed"]
+[connection signal="pressed" from="CostumeShopButton2" to="." method="_on_CostumeShopButton2_pressed"]
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
