@@ -10,6 +10,7 @@ func check_if_game_started():
 		var saved_Data:Dictionary = parse_json(save_game.get_as_text())
 		save_game.close()
 		
+		
 		print(saved_Data)
 		
 		GameGlobals.current_level = (saved_Data.current_level) 

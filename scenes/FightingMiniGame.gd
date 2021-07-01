@@ -15,6 +15,7 @@ func _ready():
 	
 	
 func _process(delta):
+	#updates the score
 	$ScoreNumberText.text = str(CharacterGlobals.current_score)
 	if GameGlobals.targets_remaining == 0:
 		spawn_new_targets()

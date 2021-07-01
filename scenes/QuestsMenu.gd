@@ -18,3 +18,4 @@ func _ready():
 
 func _on_BackToMenuButton_pressed():
 	get_tree().change_scene("res://scenes/Game.tscn")
+	
